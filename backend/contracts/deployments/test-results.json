@@ -1,0 +1,13 @@
+{
+  "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "testCompletedAt": "2025-08-15T04:36:35.268Z",
+  "candidateCount": "3",
+  "voterCount": "4",
+  "totalVotes": "4",
+  "winner": {
+    "address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "name": "Candidate 1",
+    "votes": "2"
+  },
+  "allTestsPassed": true
+}
