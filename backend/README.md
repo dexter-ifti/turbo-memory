@@ -15,11 +15,11 @@ A blockchain-based voting system backend built with Node.js, Express, MongoDB, a
 
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB with Mongoose ODM
-- **Blockchain**: Ethereum (Ganache for development)
+- **Blockchain**: Ethereum (anvil for development)
 - **Smart Contracts**: Solidity 0.8.30
 - **Authentication**: JWT with bcryptjs
 - **Security**: Helmet, CORS, Express Rate Limit
-- **Development**: Nodemon, Ganache CLI
+- **Development**: Nodemon, anvil CLI
 
 ## Project Structure
 
@@ -116,7 +116,7 @@ backend/
 | `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/voting_system` |
 | `JWT_SECRET` | Secret key for JWT tokens | `your-super-secret-jwt-key-change-in-production` |
 | `BLOCKCHAIN_RPC_URL` | Blockchain RPC endpoint | `http://127.0.0.1:7545` |
-| `ADMIN_PRIVATE_KEY` | Private key for contract deployment | Ganache default key |
+| `ADMIN_PRIVATE_KEY` | Private key for contract deployment | anvil default key |
 
 ### Optional Variables
 
@@ -127,9 +127,9 @@ backend/
 | `FRONTEND_URL` | Frontend URL for CORS | `http://localhost:3001` |
 | `JWT_EXPIRES_IN` | JWT token expiration | `24h` |
 
-### Ganache Default Accounts
+### anvil Default Accounts
 
-The `.env.example` includes default Ganache accounts for development:
+The `.env.example` includes default anvil accounts for development:
 
 - **Admin Account**: `0x90F8bf6A479f320ead074411a4B0e7944Ea8c9C1`
 - **Private Key**: `0x4f3edf983ac636a65a842ce7c78d9aa706d3b113bce9c46f30d7d21715b23b1d`
@@ -180,7 +180,7 @@ node scripts/compile-basic-voting.js
 ### 4. Deploy Smart Contracts
 
 ```bash
-# Deploy contracts to Ganache
+# Deploy contracts to anvil
 npm run deploy-contracts
 
 # Alternative: run deployment script directly
@@ -209,7 +209,7 @@ node index.js
 | `npm run setup-db` | Initialize database with default data |
 | `npm run compile-contracts` | Compile smart contracts |
 | `npm run deploy-contracts` | Deploy contracts to blockchain |
-| `npm run ganache` | Start Ganache with optimal settings |
+| `npm run anvil` | Start anvil with optimal settings |
 | `npm test` | Run test suite (if implemented) |
 
 ## API Endpoints
@@ -313,7 +313,7 @@ sudo systemctl status mongodb
 sudo systemctl start mongodb
 ```
 
-**2. Ganache Connection Error**
+**2. anvil Connection Error**
 ```bash
 # Check if Anvil is running on correct port
 netstat -tulpn | grep 8545
@@ -324,7 +324,7 @@ anvil
 
 **3. Contract Deployment Failed**
 ```bash
-# Check Ganache gas settings
+# Check anvil gas settings
 # Ensure gasLimit is high enough (10,000,000+)
 # Verify bytecode is not too large
 
