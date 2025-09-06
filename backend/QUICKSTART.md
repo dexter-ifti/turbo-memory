@@ -18,7 +18,7 @@ Your backend is **COMPLETE** and ready to run! Here's everything you need to kno
 
 ### 1. **Automated Setup** (Recommended)
 ```bash
-cd /home/ifti_taha/Code/Projects/Final_Project-2/backend
+cd backend
 ./setup.sh
 ```
 
